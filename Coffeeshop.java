@@ -24,24 +24,22 @@ public class Coffeeshop{
             //proceed with coffee purchase attemp?
             boolean isEspresso = coffeeInput.equals("espresso");
             boolean isAmericano = coffeeInput.equals("americano");
-            if(isEspresso){
-                if(balance >= (espressoPrice * amount)){
-                    //print out a successful espresso purchase message
-                    System.out.println("enjoy your espresso");
-                }else{
-                    System.out.println("you don't have enough balance");
-            }
-        }
-        if(isAmericano){
-            if(balance >= (americanoPrice * amount)){
+            if(isEspresso && (balance >= (espressoPrice * amount))){
                 //print out a successful espresso purchase message
                 System.out.println("enjoy your espresso");
+            }//else{
+            //    System.out.println("you don't have enough balance1");
+            //}
+            
+            else if(isAmericano && (balance >= (americanoPrice * amount))){
+            //print out a successful americano purchase message
+                System.out.println("enjoy your americano");
             }else{
                 System.out.println("you don't have enough balance");
             }
-        }
         }else{
             System.out.println("no coffeee - amount requested is 0 or less");
         }
     }
 }
+
