@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 public class Coffeeshop{
     public static void main(String[] args){
+        while(true){                       // this will repete the program un definetely
         Scanner sc = new Scanner(System.in);
         //ask the user for their balance
         //ask the user if they want esspresso or americano
@@ -41,5 +42,6 @@ public class Coffeeshop{
             System.out.println("no coffeee - amount requested is 0 or less");
         }
     }
+}
 }
 
